@@ -1,5 +1,5 @@
 ---
-title: "JD Data Viz"
+title: ""
 site: distill::distill_website
 listing: posts
 ---
