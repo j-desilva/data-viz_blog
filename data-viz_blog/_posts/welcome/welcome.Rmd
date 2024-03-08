@@ -3,7 +3,7 @@ title: "Exos Combine Class of 2024"
 description: |
   When it comes to Exos and the NFL combine, the numbers speak for themself.
   Exos have been preparing American Football athletes for the biggest interview
-  of their lives for 20 years. Lets take a look into the stats for the
+  of their lives for 20 years. Let's take a look into the stats for the
   2024 season. 
 author:
   - name: Jess De Silva 
@@ -36,6 +36,10 @@ data <- readxl::read_xlsx("nfl_reactable.xlsx")
 
 ```
 
+107 American Football athletes joined Exos for their 2024 8-week NFL combine 
+preparation program. Across these 8 weeks, athletes gain access to world class 
+coaches and facilities for physical evaluation, performance training, physical 
+therapy, and nutrition. 
 
 ```{r, echo=FALSE, layout="l-body-outset"}
 
