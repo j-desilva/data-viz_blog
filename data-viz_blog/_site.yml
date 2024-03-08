@@ -1,7 +1,7 @@
 name: "data-viz_blog"
-title: "Welcome to JD Data Viz"
+title: "JD Data Viz"
 description: |
-  This is a blog to bring my passion for sport and data visualisation together.
+  JD Data Viz
 output_dir: "_site"
 navbar:
   right:

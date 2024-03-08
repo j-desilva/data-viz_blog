@@ -7,7 +7,7 @@ description: |
   2024 season. 
 author:
   - name: Jess De Silva 
-date: 03-08-2024
+date: 03-8-2024
 output:
   distill::distill_article:
     self_contained: false
@@ -40,6 +40,10 @@ data <- readxl::read_xlsx("nfl_reactable.xlsx")
 preparation program. Across these 8 weeks, athletes gain access to world class 
 coaches and facilities for physical evaluation, performance training, physical 
 therapy, and nutrition. 
+
+The road to Indianapolis is competitive and requires just as much grit and 
+determination as it does skill. These athletes leave no stone unturned by 
+entrusting Exos to prepare them for the NFL Draft. 
 
 ```{r, echo=FALSE, layout="l-body-outset"}
 

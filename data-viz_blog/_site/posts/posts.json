@@ -1,5 +1,25 @@
 [
   {
+    "path": "posts/second/",
+    "title": "A Second Post",
+    "description": "This is a draft second post.",
+    "author": [
+      {
+        "name": "Jess De Silva",
+        "url": {}
+      }
+    ],
+    "date": "2024-03-08",
+    "categories": [
+      "test",
+      "R"
+    ],
+    "contents": "\nI hope this works.\n\n\n\n\n\n\n",
+    "preview": "posts/second/images/testing.png",
+    "last_modified": "2024-03-09T10:09:34+11:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/welcome/",
     "title": "Exos Combine Class of 2024",
     "description": "When it comes to Exos and the NFL combine, the numbers speak for themself.\nExos have been preparing American Football athletes for the biggest interview\nof their lives for 20 years. Let's take a look into the stats for the\n2024 season.",
@@ -14,9 +34,9 @@
       "NFL",
       "Exos"
     ],
-    "contents": "\n\n\n\n107 American Football athletes joined Exos for their 2024 8-week NFL combine\npreparation program. Across these 8 weeks, athletes gain access to world class\ncoaches and facilities for physical evaluation, performance training, physical\ntherapy, and nutrition.\n\n\n\n\n\n\nTEAM\n\n\n\n\nPOSITION\n\n\nCB\n\n\nDB\n\n\nDE\n\n\nDL\n\n\nDL/LB\n\n\nDT\n\n\nLB\n\n\nOC\n\n\nOG\n\n\nOL\n\n\nOT\n\n\nQB\n\n\nRB\n\n\nS\n\n\nTE\n\n\nWR\n\n\n\n\nPROSPECT GRADE\n\n\n\n\n\nExos 2024 Combine Athletes Drafted to the NFL\n\n\n\n\n\n",
+    "contents": "\n\n\n\n107 American Football athletes joined Exos for their 2024 8-week NFL combine\npreparation program. Across these 8 weeks, athletes gain access to world class\ncoaches and facilities for physical evaluation, performance training, physical\ntherapy, and nutrition.\nThe road to Indianapolis is competitive and requires just as much grit and\ndetermination as it does skill. These athletes leave no stone unturned by\nentrusting Exos to prepare them for the NFL Draft.\n\n\n\n\n\n\nTEAM\n\n\n\n\nPOSITION\n\n\nCB\n\n\nDB\n\n\nDE\n\n\nDL\n\n\nDL/LB\n\n\nDT\n\n\nLB\n\n\nOC\n\n\nOG\n\n\nOL\n\n\nOT\n\n\nQB\n\n\nRB\n\n\nS\n\n\nTE\n\n\nWR\n\n\n\n\nPROSPECT GRADE\n\n\n\n\n\nExos 2024 Combine Athletes Drafted to the NFL\n\n\n\n\n\n",
     "preview": "posts/welcome/images/exos.png",
-    "last_modified": "2024-03-08T21:56:09+11:00",
+    "last_modified": "2024-03-09T10:31:57+11:00",
     "input_file": "welcome.knit.md"
   }
 ]
