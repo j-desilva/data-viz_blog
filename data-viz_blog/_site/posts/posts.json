@@ -1,25 +1,5 @@
 [
   {
-    "path": "posts/second/",
-    "title": "A Second Post",
-    "description": "This is a draft second post.",
-    "author": [
-      {
-        "name": "Jess De Silva",
-        "url": {}
-      }
-    ],
-    "date": "2024-03-08",
-    "categories": [
-      "test",
-      "R"
-    ],
-    "contents": "\nI hope this works.\n\n\n\n\n\n\n",
-    "preview": "posts/second/images/testing.png",
-    "last_modified": "2024-03-09T10:09:34+11:00",
-    "input_file": {}
-  },
-  {
     "path": "posts/welcome/",
     "title": "Exos Combine Class of 2024",
     "description": "When it comes to Exos and the NFL combine, the numbers speak for themself.\nExos have been preparing American Football athletes for the biggest interview\nof their lives for 20 years. Let's take a look into the stats for the\n2024 season.",
@@ -38,5 +18,25 @@
     "preview": "posts/welcome/images/exos.png",
     "last_modified": "2024-03-09T10:31:57+11:00",
     "input_file": "welcome.knit.md"
+  },
+  {
+    "path": "posts/second/",
+    "title": "A Second Post",
+    "description": "This is a draft second post.",
+    "author": [
+      {
+        "name": "Jess De Silva",
+        "url": {}
+      }
+    ],
+    "date": "2024-03-08",
+    "categories": [
+      "test",
+      "R"
+    ],
+    "contents": "\nI hope this works.\n\n\n\n\n\n\n",
+    "preview": "posts/second/images/testing.png",
+    "last_modified": "2024-03-09T10:35:07+11:00",
+    "input_file": "second.knit.md"
   }
 ]
