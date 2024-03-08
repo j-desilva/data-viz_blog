@@ -13,8 +13,124 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 
+### load required packages
+library(reactablefmtr)
+library(htmltools)
+library(tidyverse)
+library(MetBrewer)
+library(crosstalk)
+```
+
+
+```{r, echo=FALSE}
+
+### load data
+data <- readxl::read_xlsx("nfl_reactable.xlsx")
 
 ```
+
+
+```{r, echo=FALSE}
+
+### create shared dataset for crosstalk
+crosstalk_data <- SharedData$new(data)
+
+### crosstalk team filter
+team_filter <- filter_select(
+  id = "team",
+  label = "TEAM",
+  sharedData = crosstalk_data,
+  group = ~ DRAFTED_TO
+)
+
+### crosstalk pos filter
+pos_filter <- filter_checkbox(
+  id = "pos",
+  label = "POSITION",
+  sharedData = crosstalk_data,
+  group = ~ POS,
+  inline = TRUE
+)
+
+### crosstalk grade filter
+grade_filter <- filter_slider(
+  id = "grade",
+  label = "PROSPECT GRADE",
+  sharedData = crosstalk_data,
+  column = ~ PROSPECT_GRADE,
+  ticks = FALSE,
+  dragRange = FALSE,
+  step = 0.1,
+  width = "50%"
+)
+
+### display crosstalk filters
+div(bscols(
+  list(team_filter,
+       pos_filter,
+       grade_filter))
+  )
+
+### create table
+crosstalk_data %>%
+  reactable(
+    defaultPageSize = 6,
+    language = reactableLang(
+      searchPlaceholder = "SEARCH FOR A PLAYER..."),
+    compact = TRUE,
+    theme = fivethirtyeight(centered = TRUE),
+    defaultColDef = colDef(align = 'left'),
+    columns = list(
+      TEAM_LOGO = colDef(show = FALSE),
+      POS = colDef(show = FALSE),
+      PLAYER = colDef(maxWidth = 200, name = 'NAME & POS',
+                      cell = merge_column(
+                        data = data,
+                        merged_name = 'POS',
+                        merged_position = 'below',
+                        merged_size = 14,
+                        size = 16,
+                        color = '#333333',
+                        spacing = -1
+                      )),
+      ROUND = colDef(name = 'RND PICK', 
+                     cell = icon_assign(data,
+                                        icon = "football",
+                                        fill_color = 
+                                          MetBrewer::met.brewer('VanGogh3'))),
+      DRAFTED_TO = colDef(name = 'DRAFT TEAM'),
+      PICK = colDef(name = "PICK #"),
+      EXOS_FACILITY = colDef(name = "EXOS FACILITY"),
+      PROSPECT_GRADE = colDef(name = "PROSPECT GRADE",
+                              cell = data_bars(data,
+                                               max_value = 8.0,
+                                               fill_color = 
+                                                 c("#fd84a9", 
+                                                   "#fee6ed", 
+                                                   "#d9f2f4", 
+                                                   "#42c2ca"),
+                                               number_fmt = 
+                                                 scales::number_format(accuracy = 0.1)
+      )),
+      HEADSHOT = colDef(name = '', minWidth = 150, 
+                            cell = embed_img(
+                              height = 100, 
+                              width = 135
+                            ),
+                            style = background_img(
+                              data = data, 
+                              height = '140%',
+                              img_ref = 'TEAM_LOGO'
+                            )
+      )
+    )
+  ) %>%
+  google_font(font_family = "Poppins") %>%
+  add_title("Exos 2024 Combine Athletes Drafted to the NFL", font_size = 21)
+
+```
+
+
 
 
 
