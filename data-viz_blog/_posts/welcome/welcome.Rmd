@@ -1,0 +1,20 @@
+---
+title: "Exos Combine 2024"
+description: |
+  Exos combine class of 2024 consists of 107 athletes.
+author:
+  - name: Jess De Silva 
+date: 03-08-2024
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+
+```
+
+
+

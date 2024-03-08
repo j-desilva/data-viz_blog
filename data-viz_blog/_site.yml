@@ -1,0 +1,12 @@
+name: "data-viz_blog"
+title: "JD Data Viz"
+description: |
+  This is a blog to bring my passion for sport and data visualisation together.
+output_dir: "_site"
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+output: distill::distill_article
