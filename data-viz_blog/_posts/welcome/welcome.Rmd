@@ -30,7 +30,7 @@ data <- readxl::read_xlsx("nfl_reactable.xlsx")
 ```
 
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, layout="l-body-outset"}
 
 ### create shared dataset for crosstalk
 crosstalk_data <- SharedData$new(data)
@@ -66,6 +66,7 @@ grade_filter <- filter_slider(
 
 ### display crosstalk filters
 div(bscols(
+  widths = c(10, NA, NA),
   list(team_filter,
        pos_filter,
        grade_filter))
@@ -75,9 +76,9 @@ div(bscols(
 crosstalk_data %>%
   reactable(
     defaultPageSize = 6,
+    searchable = TRUE,
     language = reactableLang(
       searchPlaceholder = "SEARCH FOR A PLAYER..."),
-    compact = TRUE,
     theme = fivethirtyeight(centered = TRUE),
     defaultColDef = colDef(align = 'left'),
     columns = list(
